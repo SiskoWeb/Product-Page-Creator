@@ -2,7 +2,6 @@ import NavBarStore from "@/components/ProductPage/NavBarStore";
 import FormBuy from "@/components/ProductPage/formBuy";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Fragment } from "react";
 
 export const metadata: Metadata = {
   title: "Precedent - Building blocks for your Next.js project",
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
 
 export default function ProductPage() {
   return (
-    <Fragment>
+    <div className="container mx-auto">
       <NavBarStore />
 
       <section>
@@ -222,6 +221,6 @@ export default function ProductPage() {
           </div>
         </div>
       </section>
-    </Fragment>
+    </div>
   );
 }

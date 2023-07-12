@@ -1,9 +1,11 @@
+"use client";
+
 import UserLayout from "@/components/Layout/UserLayout";
 import Link from "next/link";
-
+import useRegister from "@/hooks/Auth/useRegister";
 export default function Register() {
-  //   const [handleButtonClick, handleChange, data, loading] = RegisterHook();
-
+  const [datao] = useRegister();
+  console.log(datao);
   return (
     <>
       <UserLayout>

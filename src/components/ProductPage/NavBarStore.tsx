@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavBarStore() {
   return (
-    <div className="bg-white lg:pb-12">
+    <div className="bg-white lg:pb-12   ">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <header className="flex items-center justify-center py-4 md:py-8">
           <nav className=" gap-12 lg:flex">
