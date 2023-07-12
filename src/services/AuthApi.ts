@@ -10,9 +10,15 @@ const signup = async (body: object) => {
   return response.data;
 };
 
+const getdataTest = async (): Promise<any> => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  return response;
+};
+
 const AuthService = {
   signup,
   login,
+  getdataTest,
 };
 
 export default AuthService;
