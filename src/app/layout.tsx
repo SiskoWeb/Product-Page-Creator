@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,10 +15,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  //react query clines
+  const client = new QueryClient({
+    defaultOptions: { queries: { staleTime: 5000 } },
+  });
   return (
     <html lang="ar">
       <body dir="rtl" className={inter.className}>
-        {children}
+        <QueryClientProvider client={client}>{children}</QueryClientProvider>
       </body>
     </html>
   );
