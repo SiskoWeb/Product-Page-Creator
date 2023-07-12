@@ -1,9 +1,7 @@
-import BuyNow from "@/layout/user/BuyBtn";
-import FormBuy from "@/layout/user/formBuy";
-import NavBarStore from "@/user/components/NavBarStore";
-import SEO from "@/user/components/SEO";
+import NavBarStore from "@/components/ProductPage/NavBarStore";
+import FormBuy from "@/components/ProductPage/formBuy";
 import { Metadata } from "next";
-import Head from "next/head";
+import Image from "next/image";
 import { Fragment } from "react";
 
 export const metadata: Metadata = {
@@ -27,7 +25,7 @@ export default function ProductPage() {
       <section>
         <div className="relative  mx-auto max-w-screen-xl px-4 py-8 ">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 ">
-            <div className="grid order-last grid-cols-1 gap-4 lg:grid-cols-1 text-right ">
+            <div className="grid order-2 grid-cols-1 gap-4 lg:grid-cols-1 ">
               <div className="  h-full  w-full z-10">
                 <div className="md:py-8 ">
                   <div className="mb-2 md:mb-3">
@@ -41,7 +39,7 @@ export default function ProductPage() {
                       الألوان
                     </span>
 
-                    <div className="flex flex-wrap gap-2 justify-end">
+                    <div className="flex flex-wrap gap-2 ">
                       <span className="h-8 w-8 rounded-full border bg-gray-800 ring-2 ring-gray-800 ring-offset-1 transition duration-100"></span>
                       <button
                         type="button"
@@ -63,7 +61,7 @@ export default function ProductPage() {
                       مقاس
                     </span>
 
-                    <div className="flex flex-wrap gap-3 justify-end">
+                    <div className="flex flex-wrap gap-3 ">
                       <button
                         type="button"
                         className="flex h-8 w-12 items-center justify-center rounded-md border bg-white text-center text-sm font-semibold text-gray-800 transition duration-100 hover:bg-gray-100 active:bg-gray-200"
@@ -92,7 +90,7 @@ export default function ProductPage() {
                   </div>
 
                   <div className="mb-4 ">
-                    <div className="flex items-end gap-2 justify-end">
+                    <div className="flex items-end gap-2 ">
                       <span className="text-xl font-bold text-gray-800 md:text-2xl ">
                         MAD 15.00
                       </span>
@@ -102,7 +100,7 @@ export default function ProductPage() {
                     </div>
                   </div>
 
-                  <div className="mb-6 flex items-center justify-end gap-2 text-gray-500">
+                  <div className="mb-6 flex items-center  gap-2 text-gray-500">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-6 w-6"
@@ -212,13 +210,14 @@ export default function ProductPage() {
               </div>
             </div>
 
-            <div className=" lg:order-first">
-              <img
+            <div className=" lg:order-last">
+              <Image
                 src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600"
-                loading="lazy"
-                alt="Photo by Sisko"
-                className=" lg:sticky   top-0 h-6/4 w-6/4 object-cover object-center transition duration-200 group-hover:scale-110"
-              ></img>
+                width={500}
+                height={500}
+                alt="Picture of the author"
+                className=" lg:sticky content-center	  top-0 h-6/4 w-6/4 object-cover object-center transition duration-200 group-hover:scale-110"
+              />
             </div>
           </div>
         </div>
