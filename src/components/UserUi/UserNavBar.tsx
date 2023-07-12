@@ -32,18 +32,18 @@ const UserNavBar = () => {
               الصفحة الرئيسية
             </Link>
 
-            <a
+            <Link
               href="#"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
             >
               المميزات
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
             >
               من نحن
-            </a>
+            </Link>
           </nav>
 
           <div className="-ml-8 hidden flex-col gap-2.5 sm:flex-row sm:justify-center lg:flex lg:justify-start">
