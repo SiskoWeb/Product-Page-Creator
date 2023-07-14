@@ -2,14 +2,21 @@
 
 import Joi from "joi-browser";
 import { useEffect, useState } from "react";
-import { useMutation } from "@tanstack/react-query";
 import AuthService from "@/services/AuthApi";
 import notify from "../Global/useNotifaction";
 import useValidator from "../Global/useFormValidator";
 import apiClient from "@/services/baseURL";
+import Register from "@/app/register/page";
+
+interface initialData {
+  nameStore: string;
+  email: string;
+  password: string;
+  passwordConfirm: string;
+}
 
 export default function RegisterHook() {
-  const initialData = {
+  const initialData: initialData = {
     nameStore: "",
     email: "",
     password: "",
@@ -36,6 +43,8 @@ export default function RegisterHook() {
   };
 
   const datao = getdataTest();
-
+const Register=[
+  datao
+]
   return [datao];
 }
